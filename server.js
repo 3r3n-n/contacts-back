@@ -1,4 +1,4 @@
-const app = require('./app'); // mmm...
+const app = require('./app'); // por queeee
 const mongoose = require(‘mongoose’);
 
 const irb = `mongodb+srv://${process.env.CONTACTS_DB_USER}:${process.env.CONTACTS_DB_PASSWORD}@mycontactsappasies.mbffy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
