@@ -10,13 +10,7 @@ mongoose = require('mongoose');
 app.use(express.json());
 app.use(methodOverride());
 
-// Connection to DB
-mongoose.connect(process.env.DB, {
-  useFindAndModify: false,
-  useUnifiedTopology: true,
-  useNewUrlParser: true,
-  useCreateIndex: true,
-});
+
 
 // Import Models and controllers
 require('./models/contactModel');

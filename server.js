@@ -1,8 +1,15 @@
 const app = require('./app'); // mmm...
 
-const port = process.env.PORT || 3000;
-
 const irb = `mongodb+srv://${process.env.CONTACTS_DB_USER}:${process.env.CONTACTS_DB_PASSWORD}@mycontactsappasies.mbffy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+// Connection to DB
+mongoose.connect(irb, {
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useCreateIndex: true,
+});
+
+const port = process.env.PORT || 3000;
 
 // Start server
 const db = mongoose.connection;
