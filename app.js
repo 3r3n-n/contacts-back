@@ -45,13 +45,3 @@ router.put('/contacts/:id', function (req, res) {
 });
 
 app.use('/api', router);
-
-// Start server
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.on('connected', function () {
-  // we're connected!
-  app.listen(Number(process.env.PORT), function () {
-    console.log(`Server running on http://localhost:${process.env.PORT}`);
-  });
-});
