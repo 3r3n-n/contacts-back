@@ -91,7 +91,7 @@ const contactslist = () => {
                             ...
                         </div>
                         <div className="column">
-                            <button class="button iis-outlined has-text-light is-large is-success ml-2 mt-4 is-pulled-right mr-4" onClick={ ()=> {setContactSelected({});setShowModal(true)} } >Add contact</button>
+                            <button class="button is-outlined has-text-light is-large is-success ml-2 mt-4 is-pulled-right mr-4" onClick={ ()=> {setContactSelected({});setShowModal(true)} } >Add contact</button>
                         </div>
                     </div>
                     <Form showModal={showModal} onClose={ ()=> setShowModal(false)} onCreate={_onCreate} contact={contactSelected} onEdit={_onEdit}/> 
