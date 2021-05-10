@@ -37,12 +37,12 @@ const Form = ({showModal,onClose, onCreate, onEdit, contact}) => {
         <div className={showModal ? "modal is-active": "modal" }>
             <div className="modal-background"></div>
                 <div className="modal-card">
-                    <header className="modal-card-head">
-                        <p className="modal-card-title">Contact</p>
+                    <header className="modal-card-head has-background-dark">
+                        <p className="modal-card-title ml-4 has-text-white">Contact info </p>
                         
                         <button onClick={() => onClose()} className="delete" aria-label="close"></button>
                     </header>
-                    <section className="modal-card-body">
+                    <section className="modal-card-body has-background-black">
                         <div className="notification p-3 ml-4 mr-2 mb-4 mt-4 has-background-dark">
                 <div className="field">
                     <label className="label has-text-white">First Name</label>
@@ -80,9 +80,9 @@ const Form = ({showModal,onClose, onCreate, onEdit, contact}) => {
                 </div>
             </div>
                     </section>
-                    <footer className="modal-card-foot">
+                    <footer className="modal-card-foot has-background-dark">
                         <button className="button is-success" onClick={() => _onSave({...contact,firstName,lastName,phoneNumber,company,email})}>Save changes</button>
-                        <button className="button" onClick={() => {onClose();clear()}}>Cancel</button>
+                        <button className="button is-outlined has-text-light is-primary" onClick={() => {onClose();clear()}}>Cancel</button>
                     </footer>
                 </div>
             </div>

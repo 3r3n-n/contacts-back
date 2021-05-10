@@ -83,17 +83,40 @@ const contactslist = () => {
     },[page] )
     return (
         <>
-            <button onClick={ ()=> {setContactSelected({});setShowModal(true)} } >Add contact</button>
-            <Form showModal={showModal} onClose={ ()=> setShowModal(false)} onCreate={_onCreate} contact={contactSelected} onEdit={_onEdit}/> 
-            {contactList.map(contact =>{
-                return <Contact contactInfo={contact} onEdit={(contact)=>{setContactSelected(contact);setShowModal(true)} } onDelete={_onDelete} />
-            })}
-            <nav className="pagination m-2" role="navigation" aria-label="pagination">
-                <span>Page: { page } of { totalPages } </span>
-                <span>Showing: { totalContacts > 10 ? `10 of ${totalContacts}` : `${totalContacts} of ${totalContacts}` } </span>
-                <a onClick={()=>setPage(page-1)} className="pagination-previous" disabled={!prevPage}>Previous</a>
-                <a onClick={()=>setPage(page+1)} className="pagination-next has-text-light" disabled={!nextPage}>Next page</a>
-            </nav>
+            <div class="container">
+                <div class="container">
+                    <div className="columns">
+                        <div className="column is-two-thirds">
+                            ...
+                        </div>
+                        <div className="column">
+                            <button class="button is-outlined has-text-light is-large is-primary ml-2 mt-4 is-pulled-right mr-4" onClick={ ()=> {setContactSelected({});setShowModal(true)} } >Add contact</button>
+                        </div>
+                    </div>
+                    <Form showModal={showModal} onClose={ ()=> setShowModal(false)} onCreate={_onCreate} contact={contactSelected} onEdit={_onEdit}/> 
+                    {contactList.map(contact =>{
+                        return <Contact contactInfo={contact} onEdit={(contact)=>{setContactSelected(contact);setShowModal(true)} } onDelete={_onDelete} />
+                    })}
+                </div>
+                <div class="container">
+                    <nav className="pagination m-2 is-pulled-right" role="navigation" aria-label="pagination">
+                        <div className="columns">
+                            <div className="column">
+                                <a onClick={()=>setPage(page-1)} className="pagination-previous has-text-light" disabled={!prevPage}>Previous</a>
+                            </div>
+                            <div className="column">
+                                <div class="content has-text-light">
+                                    <span>Page: { page } of { totalPages } </span>
+                                    <span>Showing: { totalContacts > 10 ? `10 of ${totalContacts}` : `${totalContacts} of ${totalContacts}` } </span>
+                                </div>
+                            </div>
+                            <div className="column">
+                                <a onClick={()=>setPage(page+1)} className="pagination-next has-text-light" disabled={!nextPage}>Next page</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
         </>
     );
 };
