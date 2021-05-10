@@ -5,7 +5,7 @@ import axios from 'axios';
 import contact from '../contact/contact';
 
 const getContacts = async (page) => {
-    const limit = 2
+    const limit = 10
     const data = await axios.get(`https://contacts00back.herokuapp.com/api/contacts/?limit=${limit}&page=${page}`)
     return data.data
 }
