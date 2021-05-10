@@ -10,6 +10,7 @@ const express = require("express"),
 app.use(express.json());
 app.use(methodOverride());
 app.use(cors());
+app.use(express.static('dist'));
 
 // Import Models and controllers
 require('./models/contactModel');
