@@ -1,16 +1,15 @@
 require('dotenv').config();
+const cors = require('cors');
 const express = require("express"),
   app = express(),
   http = require("http"),
   server = http.createServer(app),
   methodOverride = require("method-override");
-mongoose = require('mongoose');
 
 // Middlewares
 app.use(express.json());
 app.use(methodOverride());
-
-
+app.use(cors());
 
 // Import Models and controllers
 require('./models/contactModel');
