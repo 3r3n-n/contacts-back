@@ -82,7 +82,7 @@ const Form = ({showModal,onClose, onCreate, onEdit, contact}) => {
                     </section>
                     <footer className="modal-card-foot has-background-dark">
                         <button className="button is-success" onClick={() => _onSave({...contact,firstName,lastName,phoneNumber,company,email})}>Save changes</button>
-                        <button className="button is-outlined has-text-light is-primary" onClick={() => {onClose();clear()}}>Cancel</button>
+                        <button className="button is-success" onClick={() => {onClose();clear()}}>Cancel</button>
                     </footer>
                 </div>
             </div>
