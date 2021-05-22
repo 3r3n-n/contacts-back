@@ -1,5 +1,6 @@
-# API for contacts app
-This repo contains an API for a simple contacts app (there are not different users) implemented in node.js , using the mongoose library.
+# Repo for contacts app
+The API for this mini-app was implemented in node.js , using the mongoose library.
+The front-end was implemented in react.
 
 ## API Reference
 
